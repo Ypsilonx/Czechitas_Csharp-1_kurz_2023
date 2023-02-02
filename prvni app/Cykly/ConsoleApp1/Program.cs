@@ -23,17 +23,52 @@ namespace Cykly
             //        spis = true;
             //    }
             //}
-            
 
-            Console.WriteLine("Zadej mi svůj rok narození:");
-            int rok;
-            while (!int.TryParse(Console.ReadLine(), out rok) || rok < 1900 || rok > DateTime.Now.Year)
+
+            //Console.WriteLine("Zadej mi svůj rok narození:");
+            //int rok;
+            //while (!int.TryParse(Console.ReadLine(), out rok) || rok < 1900 || rok > DateTime.Now.Year)
+            //{
+            //    Console.WriteLine("Nenapsal si rok správně. Zkus to znova:");
+            //}
+            //Console.WriteLine("Napsal si rok " + rok);
+            //int aktualRok = DateTime.Now.Year;
+            //Console.WriteLine("Máš " + (aktualRok - rok) + " let.");
+
+            //int rok = DateTime.Now.Year;
+            //string rokNar = Console.ReadLine();
+            //int mujRok = int.Parse(rokNar);
+            //for (int i = mujRok; i < rok; i++)
+            //{
+            //    Console.WriteLine(i + " -> Neumřel jsem.");
+            //}
+
+            //for (int i = 0; i < 21; i++)
+            //{
+            //    Console.WriteLine(i);
+            //}
+
+            //for (int i = 0; i < 21; i = i+2)
+            //{
+            //    Console.WriteLine(i);
+            //}
+            for (int i = 0; i < 20; i++)
             {
-                Console.WriteLine("Nenapsal si rok správně. Zkus to znova:");
+                if (i % 2 == 0)
+                {
+                    Console.WriteLine(i);
+                }
             }
-            Console.WriteLine("Napsal si rok " + rok);
-            int aktualRok = DateTime.Now.Year;
-            Console.WriteLine("Máš " + (aktualRok - rok) + " let.");
+            //// nebo přes modulo podmínku
+
+            Console.WriteLine("Zadej číslo od:");
+            int prvniCislo = int.Parse(Console.ReadLine());
+            Console.WriteLine("Zadej číslo do:");
+            int druheCislo = int.Parse(Console.ReadLine());
+            for (int i = prvniCislo; prvniCislo < druheCislo; prvniCislo++)
+            {
+                Console.WriteLine(prvniCislo);
+            }
         }
     }
 }
