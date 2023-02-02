@@ -11,6 +11,8 @@ namespace Kalkulacka
     {
         static void Main(string[] args)
         {
+            
+            
             Console.WriteLine("Ahoj vítám tě v jednoduché kalkulačce.");
             Console.WriteLine("Zadej první číslo:");
             string prvni_cislo = Console.ReadLine();
