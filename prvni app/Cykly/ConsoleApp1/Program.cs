@@ -52,14 +52,14 @@ namespace Cykly
             //{
             //    Console.WriteLine(i);
             //}
-            for (int i = 0; i < 20; i++)
-            {
-                if (i % 2 == 0)
-                {
-                    Console.WriteLine(i);
-                }
-            }
-            //// nebo přes modulo podmínku
+
+            //for (int i = 0; i < 20; i++)
+            //{
+            //    if (i % 2 == 0)
+            //    {
+            //        Console.WriteLine(i);
+            //    }
+            //}
 
             Console.WriteLine("Zadej číslo od:");
             int prvniCislo = int.Parse(Console.ReadLine());
