@@ -14,28 +14,28 @@ namespace Kalkulacka
             Console.WriteLine("Ahoj vítám tě v jednoduché kalkulačce.");
             Console.WriteLine("Zadej první číslo:");
             string prvni_cislo = Console.ReadLine();
-            int first = int.Parse(prvni_cislo);
+            float first = float.Parse(prvni_cislo);
             Console.WriteLine("Zadej druhé číslo:");
             string druhe_cislo = Console.ReadLine();
-            int second = int.Parse(druhe_cislo);
+            float second = float.Parse(druhe_cislo);
             Console.WriteLine("Vyber operator: (nabídka: +;-;*;/)");
             string operator_kalk = Console.ReadLine();
             if (operator_kalk == "+")
             {
                 Console.WriteLine("Vybral si operátor " + operator_kalk);
-                int vysledek_kalk = first + second;
+                float vysledek_kalk = first + second;
                 Console.WriteLine("Výsledek je " + vysledek_kalk);
             }
             else if (operator_kalk == "-")
             {
                 Console.WriteLine("Vybral si operátor " + operator_kalk);
-                int vysledek_kalk = first - second;
+                float vysledek_kalk = first - second;
                 Console.WriteLine("Výsledek je " + vysledek_kalk);
             }
             else if (operator_kalk == "*")
             {
                 Console.WriteLine("Vybral si operátor " + operator_kalk);
-                int vysledek_kalk = first * second;
+                float vysledek_kalk = first * second;
                 Console.WriteLine("Výsledek je " + vysledek_kalk);
             }
             else if (operator_kalk == "/")
@@ -46,7 +46,7 @@ namespace Kalkulacka
                     Console.WriteLine("Nelze dělit nulou!");
                     Environment.Exit(0);
                 }
-                int vysledek_kalk = first / second;
+                float vysledek_kalk = first / second;
                 Console.WriteLine("Výsledek je " + vysledek_kalk);
             }
             else
