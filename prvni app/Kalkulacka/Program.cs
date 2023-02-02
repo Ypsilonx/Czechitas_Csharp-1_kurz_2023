@@ -44,6 +44,7 @@ namespace Kalkulacka
                 if (second == 0)
                 {
                     Console.WriteLine("Nelze dělit nulou!");
+                    Environment.Exit(0);
                 }
                 int vysledek_kalk = first / second;
                 Console.WriteLine("Výsledek je " + vysledek_kalk);
