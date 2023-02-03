@@ -15,37 +15,17 @@ namespace Kalkulacka
             
             Console.WriteLine("Ahoj vítám tě v jednoduché kalkulačce.");
             Console.WriteLine("Zadej první číslo:");
-            //string prvni_cislo = Console.ReadLine();
             double first;
             while (!double.TryParse(Console.ReadLine(), out first))
-            //bool napsalCislo1 = double.TryParse(prvni_cislo, out first);
             {
                 Console.WriteLine("Nenapsal si číslo správně. Zkus to znova:");
             }
-            //if(napsalCislo1)
-            //{
-            //    Console.WriteLine("Je to cajk.");
-            //}
-            //else
-            //{
-            //    Console.WriteLine("Není to číslo kámo.");
-            //}
             Console.WriteLine("Zadej druhé číslo:");
-            //string druhe_cislo = Console.ReadLine();
             double second;
             while (!double.TryParse(Console.ReadLine(), out second))
-            //bool napsalCislo2 = double.TryParse(druhe_cislo, out second);
             {
                 Console.WriteLine("Nenapsal si číslo správně. Zkus to znova:");
             }
-            //if (napsalCislo2)
-            //{
-            //    Console.WriteLine("Je to cajk.");
-            //}
-            //else
-            //{
-            //    Console.WriteLine("Není to číslo kámo.");
-            //}
             Console.WriteLine("Vyber operátor: (nabídka: +;-;*;/)");
             bool operatorCheck = false;
             while (!operatorCheck)
