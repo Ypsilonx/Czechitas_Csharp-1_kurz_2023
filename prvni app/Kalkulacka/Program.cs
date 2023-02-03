@@ -15,68 +15,81 @@ namespace Kalkulacka
             
             Console.WriteLine("Ahoj vítám tě v jednoduché kalkulačce.");
             Console.WriteLine("Zadej první číslo:");
-            string prvni_cislo = Console.ReadLine();
+            //string prvni_cislo = Console.ReadLine();
             double first;
-            bool napsalCislo1 = double.TryParse(prvni_cislo, out first);
-            if(napsalCislo1)
+            while (!double.TryParse(Console.ReadLine(), out first))
+            //bool napsalCislo1 = double.TryParse(prvni_cislo, out first);
             {
-                Console.WriteLine("Je to cajk.");
+                Console.WriteLine("Nenapsal si číslo správně. Zkus to znova:");
             }
-            else
-            {
-                Console.WriteLine("Není to číslo kámo.");
-                return;
-            }
+            //if(napsalCislo1)
+            //{
+            //    Console.WriteLine("Je to cajk.");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Není to číslo kámo.");
+            //}
             Console.WriteLine("Zadej druhé číslo:");
-            string druhe_cislo = Console.ReadLine();
+            //string druhe_cislo = Console.ReadLine();
             double second;
-            bool napsalCislo2 = double.TryParse(druhe_cislo, out second);
-            if(napsalCislo2)
+            while (!double.TryParse(Console.ReadLine(), out second))
+            //bool napsalCislo2 = double.TryParse(druhe_cislo, out second);
             {
-                Console.WriteLine("Je to cajk.");
+                Console.WriteLine("Nenapsal si číslo správně. Zkus to znova:");
             }
-            else
+            //if (napsalCislo2)
+            //{
+            //    Console.WriteLine("Je to cajk.");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Není to číslo kámo.");
+            //}
+            Console.WriteLine("Vyber operátor: (nabídka: +;-;*;/)");
+            bool operatorCheck = false;
+            while (!operatorCheck)
             {
-                Console.WriteLine("Není to číslo kámo.");
-                return;
-            }
-            Console.WriteLine("Vyber operator: (nabídka: +;-;*;/)");
-            string operator_kalk = Console.ReadLine();
-            if (operator_kalk == "+")
-            {
-                Console.WriteLine("Vybral si operátor " + operator_kalk);
-                double vysledek_kalk = first + second;
-                Console.WriteLine("Výsledek je " + vysledek_kalk);
-            }
-            else if (operator_kalk == "-")
-            {
-                Console.WriteLine("Vybral si operátor " + operator_kalk);
-                double vysledek_kalk = first - second;
-                Console.WriteLine("Výsledek je " + vysledek_kalk);
-            }
-            else if (operator_kalk == "*")
-            {
-                Console.WriteLine("Vybral si operátor " + operator_kalk);
-                double vysledek_kalk = first * second;
-                Console.WriteLine("Výsledek je " + vysledek_kalk);
-            }
-            else if (operator_kalk == "/")
-            {
-                Console.WriteLine("Vybral si operátor " + operator_kalk);
-                if (second == 0)
+                string operatorKalk = Console.ReadLine();
+                if (operatorKalk == "+")
                 {
-                    Console.WriteLine("Nelze dělit nulou!");
-                    Environment.Exit(0);
+                    Console.WriteLine("Vybral si operátor " + operatorKalk);
+                    double vysledekKalk = first + second;
+                    Console.WriteLine("Výsledek je " + vysledekKalk);
+                    return;
                 }
-                double vysledek_kalk = first / second;
-                Console.WriteLine("Výsledek je " + vysledek_kalk);
+                else if (operatorKalk == "-")
+                {
+                    Console.WriteLine("Vybral si operátor " + operatorKalk);
+                    double vysledekKalk = first - second;
+                    Console.WriteLine("Výsledek je " + vysledekKalk);
+                    return;
+                }
+                else if (operatorKalk == "*")
+                {
+                    Console.WriteLine("Vybral si operátor " + operatorKalk);
+                    double vysledekKalk = first * second;
+                    Console.WriteLine("Výsledek je " + vysledekKalk);
+                    return;
+                }
+                else if (operatorKalk == "/")
+                {
+                    Console.WriteLine("Vybral si operátor " + operatorKalk);
+                    if (second == 0)
+                    {
+                        Console.WriteLine("Nelze dělit nulou!");
+                        return;
+                    }
+                    double vysledekKalk = first / second;
+                    Console.WriteLine("Výsledek je " + vysledekKalk);
+                    return;
+                }
+                else
+                {
+                    string vysledekKalk = "Zadal si špatný operátor pro výpočet! Zkus to znovu:";
+                    Console.WriteLine(vysledekKalk);
+                }
             }
-            else
-            {
-                string vysledek_kalk = "Zadal si špatný operátor pro výpočet!";
-                Console.WriteLine(vysledek_kalk);
-            }
-
         }
     }
 }

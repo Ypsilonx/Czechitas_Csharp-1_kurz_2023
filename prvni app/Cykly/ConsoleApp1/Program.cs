@@ -25,15 +25,15 @@ namespace Cykly
             //}
 
 
-            //Console.WriteLine("Zadej mi svůj rok narození:");
-            //int rok;
-            //while (!int.TryParse(Console.ReadLine(), out rok) || rok < 1900 || rok > DateTime.Now.Year)
-            //{
-            //    Console.WriteLine("Nenapsal si rok správně. Zkus to znova:");
-            //}
-            //Console.WriteLine("Napsal si rok " + rok);
-            //int aktualRok = DateTime.Now.Year;
-            //Console.WriteLine("Máš " + (aktualRok - rok) + " let.");
+            Console.WriteLine("Zadej mi svůj rok narození:");
+            int rok;
+            while (!int.TryParse(Console.ReadLine(), out rok) || rok < 1900 || rok > DateTime.Now.Year)
+            {
+                Console.WriteLine("Nenapsal si rok správně. Zkus to znova:");
+            }
+            Console.WriteLine("Napsal si rok " + rok);
+            int aktualRok = DateTime.Now.Year;
+            Console.WriteLine("Máš " + (aktualRok - rok) + " let.");
 
             //int rok = DateTime.Now.Year;
             //string rokNar = Console.ReadLine();
@@ -61,14 +61,14 @@ namespace Cykly
             //    }
             //}
 
-            Console.WriteLine("Zadej číslo od:");
-            int prvniCislo = int.Parse(Console.ReadLine());
-            Console.WriteLine("Zadej číslo do:");
-            int druheCislo = int.Parse(Console.ReadLine());
-            for (int i = prvniCislo; prvniCislo < druheCislo; prvniCislo++)
-            {
-                Console.WriteLine(prvniCislo);
-            }
+            //Console.WriteLine("Zadej číslo od:");
+            //int prvniCislo = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Zadej číslo do:");
+            //int druheCislo = int.Parse(Console.ReadLine());
+            //for (int i = prvniCislo; prvniCislo < druheCislo; prvniCislo++)
+            //{
+            //    Console.WriteLine(prvniCislo);
+            //}
         }
     }
 }
