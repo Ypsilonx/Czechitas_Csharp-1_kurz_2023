@@ -25,15 +25,15 @@ namespace Cykly
             //}
 
 
-            Console.WriteLine("Zadej mi svůj rok narození:");
-            int rok;
-            while (!int.TryParse(Console.ReadLine(), out rok) || rok < 1900 || rok > DateTime.Now.Year)
-            {
-                Console.WriteLine("Nenapsal si rok správně. Zkus to znova:");
-            }
-            Console.WriteLine("Napsal si rok " + rok);
-            int aktualRok = DateTime.Now.Year;
-            Console.WriteLine("Máš " + (aktualRok - rok) + " let.");
+            //Console.WriteLine("Zadej mi svůj rok narození:");
+            //int rok;
+            //while (!int.TryParse(Console.ReadLine(), out rok) || rok < 1900 || rok > DateTime.Now.Year)
+            //{
+            //    Console.WriteLine("Nenapsal si rok správně. Zkus to znova:");
+            //}
+            //Console.WriteLine("Napsal si rok " + rok);
+            //int aktualRok = DateTime.Now.Year;
+            //Console.WriteLine("Máš " + (aktualRok - rok) + " let.");
 
             //int rok = DateTime.Now.Year;
             //string rokNar = Console.ReadLine();
@@ -69,6 +69,40 @@ namespace Cykly
             //{
             //    Console.WriteLine(prvniCislo);
             //}
+
+            Console.WriteLine("Zadej minimální číslo seznamu:");
+            int minimum;
+            while (!int.TryParse(Console.ReadLine(), out minimum))
+            {
+                Console.WriteLine("Špatný vstup. Prosím napiš celé číslo znova:");
+            }
+            Console.WriteLine("Zadej maximální číslo seznamu:");
+            int maximum;
+            while (!int.TryParse(Console.ReadLine(), out maximum))
+            {
+                Console.WriteLine("Špatný vstup. Prosím napiš celé číslo znova:");
+            }
+            Console.WriteLine("Všechny čísla zobrazíš operací č. (1), sudá čísla pod op. č. (2) a lichá čísla pod op. č. (3):");
+            int operace;
+            while (!int.TryParse(Console.ReadLine(), out operace))
+            {
+                Console.WriteLine("Nezadal si správně požadovanou operaci pro zpracování. Zkus to znovu:");
+            }
+                if (operace == 2)
+                    for (int i = minimum; i <= maximum; i++)
+                    {
+                        if (i % 2 == 0) Console.WriteLine("{0} ", i);
+                    }
+                else if (operace == 3)
+                    for (int i = minimum; i <= maximum; i++)
+                    {
+                        if (i % 2 != 0) Console.WriteLine("{0} ", i);
+                    }
+                else if (operace == 1)
+                    for (int i = minimum; i <= maximum; i++)
+                    {
+                        Console.WriteLine(i);
+                    }
         }
     }
 }
