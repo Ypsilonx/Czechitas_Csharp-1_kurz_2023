@@ -84,7 +84,7 @@ namespace Cykly
             }
             Console.WriteLine("Všechny čísla zobrazíš operací č. (1), sudá čísla pod op. č. (2) a lichá čísla pod op. č. (3):");
             int operace;
-            while (!int.TryParse(Console.ReadLine(), out operace))
+            while (!int.TryParse(Console.ReadLine(), out operace) || ((operace != 1) && (operace != 2) && (operace != 3)))
             {
                 Console.WriteLine("Nezadal si správně požadovanou operaci pro zpracování. Zkus to znovu:");
             }
@@ -103,6 +103,6 @@ namespace Cykly
                     {
                         Console.WriteLine(i);
                     }
-        }
+             }
     }
 }
