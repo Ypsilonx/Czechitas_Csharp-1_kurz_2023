@@ -15,31 +15,26 @@ namespace Rocni_obdobi
             while (!rocniObdobicheck)
             {
                 string rocniObdobi = Console.ReadLine();
-                if (rocniObdobi == "jaro")
+                switch (rocniObdobi)
                 {
-                    Console.WriteLine($"{rocniObdobi} je krásné protože všechno pučí a roste");
-                    return;
-                }
-                else if (rocniObdobi == "leto")
-                {
-                    Console.WriteLine($"{rocniObdobi} tak v tomto období jezdíme na dovolenou");
-                    return;
-                }
-                else if (rocniObdobi == "podzim")
-                {
-                    Console.WriteLine($"{rocniObdobi} začíná být chladno a větrno");
-                    return;
-                }
-                else if (rocniObdobi == "zima")
-                {
-                    Console.WriteLine($"{rocniObdobi} je pro zimní sporty a vše odpočívá a jsou Vánoce");
-                    return;
-                }
-                else
-                {
-                    Console.WriteLine("Zadal si něco co není roční období. Zkus to znova:");
+                    case "jaro":
+                        Console.WriteLine($"{rocniObdobi} je krásné protože všechno pučí a roste");
+                        break;
+                    case "leto":
+                        Console.WriteLine($"{rocniObdobi} tak v tomto období jezdíme na dovolenou");
+                        break;
+                    case "podzim":
+                        Console.WriteLine($"{rocniObdobi} začíná být chladno a větrno");
+                        break;
+                    case "zima":
+                        Console.WriteLine($"{rocniObdobi} je pro zimní sporty a vše odpočívá a jsou Vánoce");
+                        break;
+                    default:
+                        Console.WriteLine("Zadal si něco co není roční období. Zkus to znova:");
+                        break;
                 }
             }
+
         }
     }
 }
