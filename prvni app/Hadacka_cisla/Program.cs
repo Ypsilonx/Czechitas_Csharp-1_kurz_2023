@@ -39,12 +39,12 @@ namespace Hadacka_cisla
                     if (tipCislo < randomNumber)
                         {
                             Console.WriteLine("Tip je nízko.");
-                            Console.WriteLine(randomNumber);
+                            //Console.WriteLine(randomNumber);
                         }
                     else if (tipCislo > randomNumber)
                         {
                             Console.WriteLine("Tip je vysoko.");
-                            Console.WriteLine(randomNumber);
+                            //Console.WriteLine(randomNumber);
                         }
                     else if (tipCislo == randomNumber)
                         {
