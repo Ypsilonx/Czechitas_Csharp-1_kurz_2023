@@ -31,35 +31,35 @@ namespace Kalkulacka
                 string operatorKalk = Console.ReadLine();
                 if (operatorKalk == "+")
                 {
-                    Console.WriteLine("Vybral si operátor " + operatorKalk);
+                    Console.WriteLine($"Vzorec zní: {first} {operatorKalk} {second} =");
                     double vysledekKalk = first + second;
-                    Console.WriteLine("Výsledek je " + vysledekKalk);
+                    Console.WriteLine($"Výsledek je {vysledekKalk}.");
                     return;
                 }
                 else if (operatorKalk == "-")
                 {
-                    Console.WriteLine("Vybral si operátor " + operatorKalk);
+                    Console.WriteLine($"Vzorec zní: {first} {operatorKalk} {second} =");
                     double vysledekKalk = first - second;
-                    Console.WriteLine("Výsledek je " + vysledekKalk);
+                    Console.WriteLine($"Výsledek je {vysledekKalk}.");
                     return;
                 }
                 else if (operatorKalk == "*")
                 {
-                    Console.WriteLine("Vybral si operátor " + operatorKalk);
+                    Console.WriteLine($"Vzorec zní: {first} {operatorKalk} {second} =");
                     double vysledekKalk = first * second;
-                    Console.WriteLine("Výsledek je " + vysledekKalk);
+                    Console.WriteLine($"Výsledek je {vysledekKalk}.");
                     return;
                 }
                 else if (operatorKalk == "/")
                 {
-                    Console.WriteLine("Vybral si operátor " + operatorKalk);
+                    Console.WriteLine($"Vzorec zní: {first} {operatorKalk} {second} =");
                     if (second == 0)
                     {
                         Console.WriteLine("Nelze dělit nulou!");
                         return;
                     }
                     double vysledekKalk = first / second;
-                    Console.WriteLine("Výsledek je " + vysledekKalk);
+                    Console.WriteLine($"Výsledek je {vysledekKalk}.");
                     return;
                 }
                 else
