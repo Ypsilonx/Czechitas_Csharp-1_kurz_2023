@@ -59,8 +59,11 @@ namespace Hadacka_cisla
                             Console.WriteLine($"Pokus číslo {pokus}.");
                             if (pokus == 5 && tipCislo != randomNumber)
                             {
+                                Console.WriteLine("-------------------------------");
                                 Console.WriteLine($"Nepovedlo se ti uhodnout náhodné číslo, které bylo {randomNumber}");
+                                Console.WriteLine("-------------------------------");
                             }
+
                         }
                     }
                     else
