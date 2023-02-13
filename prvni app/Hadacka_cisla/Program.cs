@@ -14,18 +14,18 @@ namespace Hadacka_cisla
             string novaHra = "";
             do
             {
-                Console.WriteLine("Chceš vygenerovat hádané číslo? (A/N)");
-                string rozhodnutiHrat = "";
-                while (rozhodnutiHrat != "A" && rozhodnutiHrat != "N")
-                {
-                    rozhodnutiHrat = Console.ReadLine();
-                    if (rozhodnutiHrat == "N")
-                    {
-                        Console.WriteLine("Škoda, mohli jsme si zahrát. Sbohem.");
-                        return;
-                    }
-                    else if (rozhodnutiHrat == "A")
-                    {
+                //Console.WriteLine("Chceš vygenerovat hádané číslo? (A/N)");
+                //string rozhodnutiHrat = "";
+                //while (rozhodnutiHrat != "A" && rozhodnutiHrat != "N")
+                //{
+                    //rozhodnutiHrat = Console.ReadLine();
+                    //if (rozhodnutiHrat == "N")
+                    //{
+                        //Console.WriteLine("Škoda, mohli jsme si zahrát. Sbohem.");
+                        //return;
+                    //}
+                    //else if (rozhodnutiHrat == "A")
+                    //{
                         Random rnd = new Random();
                         int randomNumber = rnd.Next(1, 101);
                         Console.WriteLine("Mám číslo mezi 1 a 100. Teď budeš hádat a máš 5 pokusů.");
@@ -65,12 +65,12 @@ namespace Hadacka_cisla
                             }
 
                         }
-                    }
-                    else
-                    {
-                        Console.WriteLine("Tvá odpověď neodpovídá Ano nebo Ne.");
-                    }
-                }
+                    //}
+                    //else
+                    //{
+                        //Console.WriteLine("Tvá odpověď neodpovídá Ano nebo Ne.");
+                    //}
+                //}
             Console.WriteLine("Chceš hrát znovu? (A/N)");
                 string znovu = "";
                 while (znovu != "A" && znovu != "N")
